@@ -25,11 +25,13 @@ document.querySelector('button').addEventListener('click', function (e) {
     console.log(lunghezza)
     const eta = document.getElementById("eta").value;
     console.log(eta)
+    const userName = document.getElementById("userName").value;
+    console.log(userName)
 
     //calcolare costo tratta
     const costoTratta = lunghezza * 0.21;
     console.log('prezzo intero: ' + costoTratta);
-    
+
     //calcolare eventuale sconto
 
     if (eta==="minorenne") {

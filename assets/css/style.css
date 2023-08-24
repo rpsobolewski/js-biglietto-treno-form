@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+}
+
+body{
+    background-color: hsl(0, 31%, 95%);
+}
+
+.section{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    
+}
+
+.buttons{
+    justify-content: center;
+}
+
+button{
+    color: hsl(221.54deg 18.31% 13.92%);
+    padding: 13px 20px;
+    margin: 0 5px;
+    background-color: white;
+    border-radius: 25px;
+    border: 2px solid hsl(221.54deg 18.31% 13.92%);
+    font-weight: bold;
+    font-size: 15px;
+}
+.top{
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    background-color:hsl(357.37deg 64.77% 34.51%); 
+    padding: 50px 40px;
+    border-radius: 30px;
+    background-image: url(../img/train-47992.png);
+    background-size: cover;
+    box-shadow: 0 0 10px 1px grey;
+
+}
+.space{
+    padding: 13px 20px;
+    background-color: white;
+    border-radius: 25px;
+    border: 1px solid ;
+    text-align: center;
+    border: 2px solid hsl(221.54deg 18.31% 13.92%);
+    margin-left: 10px;
+
+}
