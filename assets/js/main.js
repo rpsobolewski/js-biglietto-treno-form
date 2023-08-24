@@ -18,36 +18,31 @@ strumenti:
  */
 
 //chiedere km
-/* const lunghezza = Number(prompt('quanti km devi percorrere?')); 
-console.log('km da percorrere: '+ lunghezza)  ;
-//chiedere eta
-const eta = Number(prompt('quanti anni hai?')) ;
-console.log('età: '+ eta + ' anni')  ; */
+
 document.querySelector('button').addEventListener('click', function (e) {
-    // loggo in console qualcosa per capire se sto pulsante é stato cliccato
-   
-    // se funge, posso...
-   const lunghezza = document.getElementById("lunghezza").value;
-   console.log(lunghezza)
-   const eta = document.getElementById("eta").value;
-   console.log(eta)
-   });
+    
+    const lunghezza = document.getElementById("lunghezza").value;
+    console.log(lunghezza)
+    const eta = document.getElementById("eta").value;
+    console.log(eta)
+
+    //calcolare costo tratta
+    const costoTratta = lunghezza * 0.21;
+    console.log('prezzo intero: ' + costoTratta);
+    
+    //calcolare eventuale sconto
+
+    if (eta==="minorenne") {
+        const costoFinale = (costoTratta / 100) * 80;
+        const costoArrotondato = costoFinale.toFixed(2);
+        console.log('prezzo con sconto: ' + costoArrotondato);
+
+    } else if (eta==="senior") {
+        const costoFinale = (costoTratta / 100) * 60;
+        const costoArrotondato = costoFinale.toFixed(2);
+        console.log('prezzo con sconto: ' + costoArrotondato);
+    }
+
+});
 
 
-/* //calcolare costo tratta
-const costoTratta = lunghezza * 0.21;
-console.log('prezzo intero: ' + costoTratta);
-//calcolare eventuale sconto
-
-if(eta < 18){
-    const costoFinale = (costoTratta / 100) * 80;
-    const costoArrotondato = costoFinale.toFixed(2);
-   console.log('prezzo con sconto: ' + costoArrotondato); 
-
-} else if(eta > 65){
-    const costoFinale = (costoTratta / 100) * 60;
-    const costoArrotondato = costoFinale.toFixed(2);
-   console.log('prezzo con sconto: ' + costoArrotondato); 
-}  */
-
-//log prezzo biglietto
