@@ -20,7 +20,7 @@ strumenti:
 //chiedere km
 
 document.querySelector('button').addEventListener('click', function (e) {
-    
+
     const lunghezza = document.getElementById("lunghezza").value;
     console.log(lunghezza)
     const eta = document.getElementById("eta").value;
@@ -36,26 +36,34 @@ document.querySelector('button').addEventListener('click', function (e) {
 
     //calcolare eventuale sconto
 
-    if (eta==="minorenne") {
+    if (eta === "minorenne") {
         const costoFinale = (costoTratta / 100) * 80;
         const costoArrotondato = costoFinale.toFixed(2);
         console.log('prezzo con sconto: ' + costoArrotondato);
         const costoTicket = document.getElementById("costoTicket");
-        costoTicket.innerHTML = costoArrotondato +" €"
+        costoTicket.innerHTML = costoArrotondato + " €"
 
-    } else if (eta==="senior") {
+    } else if (eta === "senior") {
         const costoFinale = (costoTratta / 100) * 60;
         const costoArrotondato = costoFinale.toFixed(2);
         console.log('prezzo con sconto: ' + costoArrotondato);
         const costoTicket = document.getElementById("costoTicket");
-        costoTicket.innerHTML = costoArrotondato +" €"
-        
-    }else{
+        costoTicket.innerHTML = costoArrotondato + " €"
+
+    } else {
         const costoArrotondato = costoTratta.toFixed(2);
         const costoTicket = document.getElementById("costoTicket");
-        costoTicket.innerHTML = costoArrotondato +" €"
+        costoTicket.innerHTML = costoArrotondato + " €"
     }
 
 });
 
+
+let annulla = document.getElementById('annulla');
+
+
+annulla.addEventListener('click', function () {
+
+    location.reload();
+});
 
