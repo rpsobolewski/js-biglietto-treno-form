@@ -27,6 +27,8 @@ document.querySelector('button').addEventListener('click', function (e) {
     console.log(eta)
     const userName = document.getElementById("userName").value;
     console.log(userName)
+    const userNameTicket = document.getElementById("userNameTicket");
+    userNameTicket.innerHTML = userName
 
     //calcolare costo tratta
     const costoTratta = lunghezza * 0.21;
@@ -38,11 +40,20 @@ document.querySelector('button').addEventListener('click', function (e) {
         const costoFinale = (costoTratta / 100) * 80;
         const costoArrotondato = costoFinale.toFixed(2);
         console.log('prezzo con sconto: ' + costoArrotondato);
+        const costoTicket = document.getElementById("costoTicket");
+        costoTicket.innerHTML = costoArrotondato +" €"
 
     } else if (eta==="senior") {
         const costoFinale = (costoTratta / 100) * 60;
         const costoArrotondato = costoFinale.toFixed(2);
         console.log('prezzo con sconto: ' + costoArrotondato);
+        const costoTicket = document.getElementById("costoTicket");
+        costoTicket.innerHTML = costoArrotondato +" €"
+        
+    }else{
+        const costoArrotondato = costoTratta.toFixed(2);
+        const costoTicket = document.getElementById("costoTicket");
+        costoTicket.innerHTML = costoArrotondato +" €"
     }
 
 });
